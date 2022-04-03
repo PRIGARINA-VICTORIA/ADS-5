@@ -17,23 +17,25 @@
 	}
 	
 
-	int Execute(char operation, int first, int second) {
-	  switch(operation) {
-	    case '+' :
-	      return first + second; 
-	        break;
-	    case  '-': 
-	        first - second;
-	        break;
-	    case  '*':
-	        first * second;
-	        break;
-	    case '/' :
-	        first / second;
-	        break;
-	    }
-	}
 	
+int Execute(char operation, int first, int second) {
+    switch (operation) {
+    case '+':
+        return first + second;
+        break;
+    case  '-':
+        return  second - first;
+        break;
+    case  '*':
+        return first * second;
+        break;
+    case '/':
+       return second / first ;
+        break;
+    default: return 0;
+    }
+   
+}
 
 	std::string infx2pstfx(std::string inf) {
 	  // добавьте код
