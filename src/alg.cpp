@@ -46,7 +46,7 @@ std::string infx2pstfx(std::string inf) {
 		if (Prior > -1) {
 			if ((Prior == 0 || Prior > ShowPrior(start) ||
 					 stack1.isEmpty()) && inf[i] != ')') {
-				if (stack1.isEmpty()) 
+				if (stack1.isEmpty())
 					start = inf[i];
 				stack1.push(inf[i]);
 			} else if (inf[i] == ')') {
@@ -86,15 +86,15 @@ int eval(std::string post) {
 	TStack <int, 100> stack2;
 	int res = 0, first= 0, second = 0;
 	for (int i = 0; i < post.length(); i++) {
-		if (ShowPrior(post[i]) == -1) && post[i] != ' ') {
-			stack2.push(post[i] - '0');
-		} else if (ShowPrior(post[i] > 1)) {
-				second = stack2.get();
-				stack2.pop();
-				first = stack2.get();
-				stack2.pop();
-				stack2.push(Execute(post[i], first, second));
-		  }
+		if ((ShowPrior(post[i]) == -1) && post[i] != ' ') {
+			stack2.push(post[i]) - '0');
+		} else if (ShowPrior(post[i]) > 1)) {
+			second = stack2.get();
+			stack2.pop();
+			first = stack2.get();
+			stack2.pop();
+			stack2.push(Execute(post[i], first, second));
+		}
 	}
 	res = stack2.get();
 	return res;
