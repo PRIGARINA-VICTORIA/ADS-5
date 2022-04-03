@@ -87,7 +87,7 @@ int eval(std::string post) {
 	int res = 0, first= 0, second = 0;
 	for (int i = 0; i < post.length(); i++) {
 		if ((ShowPrior(post[i]) == -1) && post[i] != ' ') {
-			stack2.push(post[i]) - '0');
+			stack2.push(post[i] - '0');
 		} else if (ShowPrior(post[i]) > 1)) {
 			second = stack2.get();
 			stack2.pop();
