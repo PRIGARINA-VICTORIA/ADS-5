@@ -51,7 +51,7 @@
 	        while (stack1.get() != '(') {
 	          str.push_back(stack1.get()); 
 	          str.push_back(' ');
-	          stack1.pop;
+	          stack1.pop();
 	        }
 	        stack1.pop();
 	        if (stack1.isEmpty())
@@ -60,7 +60,7 @@
 	        while (!stack1.isEmpty() && ShowPrior(stack1.get()) >= Prior) {
 	          str.push_back(stack1.get());
 	          str.push_back(' ');
-	          stack1.pop;
+	          stack1.pop();
 	        }
 	        if (stack1.isEmpty())
 	          start = inf[i];
@@ -74,7 +74,7 @@
 	  while (!stack1.isEmpty()) {
 	    str.push_back(stack1.get());
 	    str.push_back(' ');
-	    stack1.pop;
+	    stack1.pop();
 	  }
 	  str.erase(str.end() - 1, str.end());
 	  return str;
