@@ -14,10 +14,7 @@ int ShowPrior(char prior) {
 		default:
 			return -1;
 	}
-}
-	
-
-	
+}	
 int Execute(char operation, int first, int second) {
 	switch (operation) {
 		case '+':
@@ -35,7 +32,6 @@ int Execute(char operation, int first, int second) {
 		default: return 0;
 	}
 }
-
 std::string infx2pstfx(std::string inf) {
 	  // добавьте код
 	char  start = 0;
@@ -51,7 +47,7 @@ std::string infx2pstfx(std::string inf) {
 				stack1.push(inf[i]);
 			} else if (inf[i] == ')') {
 				while (stack1.get() != '(') {
-					str.push_back(stack1.get()); 
+					str.push_back(stack1.get());
 					str.push_back(' ');
 					stack1.pop();
 				}
