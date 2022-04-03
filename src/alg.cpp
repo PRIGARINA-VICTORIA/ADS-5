@@ -24,13 +24,13 @@ int Execute(char operation, int first, int second) {
 			return first + second;
 			break;
 		case  '-':
-			return  second - first;
+			return first - second;
 			break;
 		case  '*':
 			return first * second;
 			break;
 		case '/':
-			return second / first ;
+			return first / second;
 			break;
 		default: return 0;
 	}
