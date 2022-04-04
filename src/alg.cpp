@@ -4,17 +4,18 @@
 #include <map>
 #include "tstack.h"
 int ShowPrior(char prior) {
-	switch(prior) {
-		case '(' : return 0;
-		case ')' : return 1;
-		case '+' : return 2;
-		case '-' : return 2;
-		case '*' : return 3;
-		case '/' : return 3;
+	switch (prior) {
+		case '(': return 0;
+		case ')': return 1;
+		case '+': return 2;
+		case '-': return 2;
+		case '*': return 3;
+		case '/': return 3;
 		default:
 			return -1;
 	}
-}	
+}
+
 int Execute(char operation, int first, int second) {
 	switch (operation) {
 		case '+':
@@ -33,7 +34,7 @@ int Execute(char operation, int first, int second) {
 	}
 }
 std::string infx2pstfx(std::string inf) {
-	  // добавьте код
+	// добавьте код
 	char  start = 0;
 	TStack <char, 100> stack1;
 	std::string str;
@@ -78,9 +79,9 @@ std::string infx2pstfx(std::string inf) {
 	return str;
 }
 int eval(std::string post) {
-	  // добавьте код
+	// добавьте код
 	TStack <int, 100> stack2;
-	int res = 0, first= 0, second = 0;
+	int res = 0, first = 0, second = 0;
 	for (int i = 0; i < post.length(); i++) {
 		if ((ShowPrior(post[i]) == -1) && post[i] != ' ') {
 			stack2.push(post[i] - '0');
